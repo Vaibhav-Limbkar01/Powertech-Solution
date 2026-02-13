@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Services | CompanyName</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <a href="index.html" class="logo-container">
+    <img src="assets/images/company-logo.png" alt="Company Logo">
+    <span class="company-name">All in one Powertech Solutions Pvt. Ltd.</span>
+  </a>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+
+
+<!-- ================= INTRO ================= -->
+<section class="section">
+  <h2 class="section-title">Our Solar Services</h2>
+  <p style="max-width:700px;font-size:18px;">
+    Click on a service to explore detailed offerings and expertise.
+  </p>
+</section>
+
+<!-- ================= SERVICES SLIDER ================= -->
+<section class="section light-bg">
+  <div class="services-slider">
+
+    <div class="service-slide" data-target="consultancy">
+      <img src="assets/images/Consultant.jpg" />
+      <h3>Solar Energy Consultancy</h3>
+    </div>
+
+    <div class="service-slide" data-target="epc">
+      <img src="assets/images/maintenance.jpg" />
+      <h3>Solar EPC Solutions</h3>
+    </div>
+
+    <div class="service-slide" data-target="products">
+      <img src="assets/images/Solar-Panel.jpg" />
+      <h3>Solar Panels & Accessories</h3>
+    </div>
+
+    <div class="service-slide" data-target="maintenance">
+      <img src="assets/images/solar panel installation.jpg" />
+      <h3>Maintenance Services</h3>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= SERVICE DETAILS (HIDDEN INITIALLY) ================= -->
+<section class="section service-details">
+
+  <div id="consultancy" class="service-info">
+    <h3>Solar Energy Consultancy</h3>
+    <p>
+      Our experts guide you through feasibility studies, financial analysis,
+      and system design to ensure optimal solar investments.
+    </p>
+    <ul>
+      <li>Site survey & feasibility</li>
+      <li>ROI analysis</li>
+      <li>System sizing</li>
+      <li>Policy & subsidy guidance</li>
+    </ul>
+  </div>
+
+  <div id="epc" class="service-info">
+    <h3>Solar EPC Solutions</h3>
+    <p>
+      Complete end-to-end EPC solutions covering engineering, procurement,
+      construction, and commissioning.
+    </p>
+    <ul>
+      <li>Design & engineering</li>
+      <li>Quality procurement</li>
+      <li>Installation</li>
+      <li>Testing & commissioning</li>
+    </ul>
+  </div>
+
+  <div id="products" class="service-info">
+    <h3>Solar Panels & Accessories</h3>
+    <p>
+      High-efficiency solar panels and system components sourced from
+      trusted manufacturers.
+    </p>
+    <ul>
+      <li>Solar PV modules</li>
+      <li>Inverters & controllers</li>
+      <li>Mounting structures</li>
+      <li>Cables & safety equipment</li>
+    </ul>
+  </div>
+
+  <div id="maintenance" class="service-info">
+    <h3>Maintenance Services</h3>
+    <p>
+      Keep your solar plant performing at peak efficiency with our
+      preventive and corrective maintenance services.
+    </p>
+    <ul>
+      <li>Routine inspection</li>
+      <li>Cleaning & optimization</li>
+      <li>Performance monitoring</li>
+      <li>Annual maintenance contracts</li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="footer-content">
+    <p>© 2026 Allinonepowertechsolutions Pvt. Ltd. All Rights Reserved.</p>
+    <div class="social-links">
+      <a href="#">LinkedIn</a>
+      <a href="#">Instagram</a>
+      <a href="#">Twitter</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+  const slides = document.querySelectorAll(".service-slide");
+  const services = document.querySelectorAll(".service-info");
+
+  slides.forEach(slide => {
+    slide.addEventListener("click", () => {
+      const target = slide.getAttribute("data-target");
+
+      services.forEach(service => {
+        service.classList.remove("active");
+        service.style.display = "none";
+      });
+
+      const activeService = document.getElementById(target);
+      activeService.style.display = "block";
+      activeService.classList.add("active");
+
+      activeService.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
