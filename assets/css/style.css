@@ -359,3 +359,119 @@ button:hover {
   text-decoration: none;
   color: var(--primary);
 }
+
+/* ================================================= */
+/* ================= MOBILE FIXES ================== */
+/* ================================================= */
+
+@media (max-width: 768px) {
+
+  /* ===== Navbar ===== */
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .company-name {
+    font-size: 14px;
+    margin-left: 15px;
+  }
+
+  .navbar nav {
+    display: none;
+    position: absolute;
+    top: 75px;
+    right: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    padding: 20px 0;
+  }
+
+  .navbar nav.active {
+    display: flex;
+  }
+
+  .navbar nav a {
+    margin: 15px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+  /* ===== Hero Section ===== */
+  .hero {
+    padding: 0 20px;
+    height: 85vh;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  /* ===== Sections ===== */
+  .section {
+    padding: 60px 20px;
+  }
+
+  .section-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  /* ===== Image Slider ===== */
+  .slider img {
+    width: 280px;
+    height: 180px;
+  }
+
+  /* ===== Services Slider ===== */
+  .service-slide {
+    min-width: 250px;
+  }
+
+  /* ===== Founders Section ===== */
+  .founders {
+    gap: 40px;
+  }
+
+  .founder img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .founder h4 {
+    font-size: 15px;
+  }
+
+  /* ===== Contact Grid ===== */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .contact-form-box,
+  .contact-info-box {
+    padding: 25px;
+  }
+
+  /* ===== Footer ===== */
+  .footer {
+    padding: 30px 20px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+}

@@ -1,14 +1,26 @@
-// ACCORDION
-document.querySelectorAll(".accordion-title").forEach(title => {
+// Mobile Navbar Toggle
+const toggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("nav-menu");
+
+if (toggle) {
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+}
+
+// Accordion
+const accordions = document.querySelectorAll(".accordion-title");
+
+accordions.forEach(title => {
   title.addEventListener("click", () => {
     const content = title.nextElementSibling;
-    const isOpen = content.style.display === "block";
 
-    document.querySelectorAll(".accordion-content").forEach(c => {
-      c.style.display = "none";
+    document.querySelectorAll(".accordion-content").forEach(item => {
+      if (item !== content) item.style.display = "none";
     });
 
-    content.style.display = isOpen ? "none" : "block";
+    content.style.display =
+      content.style.display === "block" ? "none" : "block";
   });
 });
 
@@ -29,3 +41,12 @@ document.querySelectorAll(".service-slide").forEach(slide => {
     });
   });
 });
+
+const toggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("nav-menu");
+
+if (toggle) {
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+}
